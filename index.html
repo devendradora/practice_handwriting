@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd" >
+<html>
+<head>
+<title>MyApp</title>
+</head>
+	<link rel="stylesheet" href="jquery.mobile-1.4.3.css">
+<style>
+body {
+	background-color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	
+	line-height: 1em;
+	padding:10px 0pt 0pt 30px;
+}
+#outputbox {
+	font-size: 50px;
+	font-style: normal;
+	font-weight: bold;
+	color: #ff0060;
+}
+
+</style>
+<body>
+<div id="sample" style="border:1px solid black;position:relative;height:300px;width:200px;float:left"></div>
+<br clear="all"/><br/><br/>
+<div id="outputbox" style="padding-top:40px;">
+</div>
+
+<p id="one" ></p>
+<script type="text/javascript" src="js/wz_jsgraphics.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="jquery.mobile-1.4.3.js"></script>
+<script type="text/javascript" src="js/jquery.fancygestures.js"></script>
+
+<script>
+$(document).ready(function () {   
+	$('#sample').fancygestures(function (source) {
+		document.getElementById('outputbox').innerHTML += source;	
+	});
+});	
+
+</script>
+	
+
+
+</body>
+</html>
